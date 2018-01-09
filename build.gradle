@@ -68,6 +68,7 @@ dependencies {
     compile "org.springframework:spring-core:$springVersion"
     compile "org.springframework:spring-jdbc:$springVersion"
     compile "org.springframework:spring-tx:$springVersion"
+    //compile "org.springframework.boot:spring-boot-autoconfigure:1.5.9.RELEASE"
     //compile "org.springframework.retry:spring-retry:$springRetryVersion"
       
     //oracle

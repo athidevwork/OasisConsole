@@ -10,21 +10,20 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.delphi.rest.config.OasisConsoleConfig;
-import com.delphi.rest.dao.OasisConsoleDAO;
 import com.delphi.rest.exception.JsonMappingExceptionMapper;
 import com.delphi.rest.exception.JsonParseExceptionMapper;
 import com.delphi.rest.resource.OasisConsoleResource;
-import com.delphi.rest.service.OasisConsoleService;
 
 /**
  * @author Athi
  *
  */
+@ComponentScan("com.delphi.rest")
 public class OasisConsoleServer {
 	static Logger LOGGER = LoggerFactory.getLogger(OasisConsoleResource.class);
 	

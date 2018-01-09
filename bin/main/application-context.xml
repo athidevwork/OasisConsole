@@ -31,7 +31,12 @@
 	    <property name="password" value="${spring.datasource.password}"/>
     </bean>
 
-  <bean id="applicationContext" class="com.delphi.rest.config.SpringApplicationContext"></bean>
+  <bean id="SpringApplicationContext" class="com.delphi.rest.config.SpringApplicationContext">
+  </bean>
+  
+  <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+  	<property name="dataSource" ref="dataSource"/>
+  </bean>
   
   <tx:annotation-driven proxy-target-class="true" />
   
