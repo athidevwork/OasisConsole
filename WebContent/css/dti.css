@@ -1,0 +1,82 @@
+a:link {color: blue}
+a:hover {color: black}
+a:active {color:red;}
+a:visited {color: green}
+
+fieldset {
+  border: 1;
+}
+label {
+  display: block;
+  float: left;
+  margin: 10px 0 0 0;
+}
+select {
+	margin: 10px 10px 10px 0;
+}
+.overflow {
+  height: 200px;
+}
+
+footer {
+	color: blue;
+	float: center;
+	font-weight: bold;
+}
+
+/*.ui-controlgroup-vertical {
+  width: 150px;
+}
+.ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
+.ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
+  text-align: center;
+}
+ #car-type-button {
+  width: 120px;
+} 
+.ui-controlgroup-horizontal .ui-spinner-input {
+  width: 20px;
+}*/
+    
+div#wrapper {
+	margin:auto;
+	background:white;
+	width:1200px;
+	height:960px;
+}
+
+header {
+	display: block;
+	padding: 0px 0px 60px 0px;
+}
+
+#headerLogo {float: left;}
+
+#headerTitle { padding: 10px 525px 10px 400px; }
+
+#time {
+	/*display: block;*/
+	padding: 0px 0px 60px 0px;
+	color: yellow;
+	font-weight: bold;
+	float: right;
+}
+
+#horizontalNav {
+	display: block;
+	padding: 5px 5px 5px 5px;
+	background: #0e2f66;
+}
+
+#horizontalNav a {
+	text-decoration: none;
+	padding: 0px 0px 0px 10px;
+	color: yellow;	
+}
+
+div#main {
+	padding: 10px 20px 20px 20px;
+}
+
+#envsubmit {float: right;}
+

@@ -12,19 +12,19 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  */
 @XmlRootElement
-public class ODSConfig {
-	List<SystemParameterUtil> systemParameterUtil;
+public class OSType {
+	List<SystemParameterUtilType> systemParameterUtil;
 
-	public List<SystemParameterUtil> getSystemParameterUtil() {
+	public List<SystemParameterUtilType> getSystemParameterUtil() {
 		return systemParameterUtil;
 	}
 
-	public void setSystemParameterUtil(List<SystemParameterUtil> systemParameterUtil) {
+	public void setSystemParameterUtil(List<SystemParameterUtilType> systemParameterUtil) {
 		this.systemParameterUtil = systemParameterUtil;
 	}
 
 	@Override
 	public String toString() {
-		return "OasisConfig [spu=" + systemParameterUtil + "]";
+		return "OSType [spu=" + systemParameterUtil + "]";
 	}
 }

@@ -5,7 +5,7 @@ package com.delphi.rest.service;
 
 import org.springframework.stereotype.Service;
 
-import com.delphi.rest.entity.OasisConfig;
+import com.delphi.rest.entity.OasisConfigType;
 
 /**
  * @author Athi
@@ -13,5 +13,6 @@ import com.delphi.rest.entity.OasisConfig;
  */
 @Service("OasisConsoleService")
 public interface OasisConsoleService {
-	public OasisConfig getConfig();
+	//public OasisConfigType getConfig();
+	public OasisConfigType getConfig(String env);
 }

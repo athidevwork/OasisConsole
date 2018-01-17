@@ -9,6 +9,8 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 /**
  * @author Athi
@@ -19,16 +21,20 @@ public class SpringApplicationContext implements ApplicationContextAware {
 	@Autowired
 	private static ApplicationContext applicationContext;
 
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+    
+	public static ApplicationContext getApplicationContext() {
+		return applicationContext;
+	}
+
 	public void setApplicationContext(ApplicationContext applicationContext)
 			throws BeansException
 	{
 		System.out.println("Setting spring context = " + applicationContext);
 		System.out.println("Beans = \n" + Arrays.asList(applicationContext.getBeanDefinitionNames()) + "\n");
-		
-	    /*ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner((BeanDefinitionRegistry) applicationContext);
-	    BeanDefinitionDefaults defaults = new BeanDefinitionDefaults();
-	    defaults.setLazyInit(true);
-	    scanner.setBeanDefinitionDefaults(defaults);*/
 	    
 		SpringApplicationContext.applicationContext = applicationContext;
 	}
@@ -50,5 +56,11 @@ public class SpringApplicationContext implements ApplicationContextAware {
 			return null;
 		}
 		return applicationContext.getBean(beanName);
+	}
+	
+	public static Object getProperty(String property) {
+		if (null == property)
+			return null;
+		return applicationContext.getEnvironment().getProperty(property);
 	}
 }

@@ -117,3 +117,15 @@ test {
                    'Main-Class': 'com.delphi.rest.server.OasisConsoleServer'
     }
 }*/
+
+jar {
+  manifest { 
+    attributes 'Implementation-Title': 'OasisConsoleServer',
+               'Implementation-Version': 1.0,
+               "Main-Class": "$mainClassName"
+  }  
+
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}

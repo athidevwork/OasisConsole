@@ -1,0 +1,1291 @@
+/* ###################################### */
+/* #### DEFAULT STYLES ################## */
+/* ###################################### */
+body, form, div, table, tr, th, td, span, font, p, pre, ul, ol, li, input, button, select, textarea, a, a:active, a:focus, a:visited, sub, sup {
+	font-family: Arial, Verdana, "Trebuchet MS";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	color: #333333;
+	font-size: 12px;
+}
+
+fieldset {
+  border:1px solid #999;
+  padding:5px;
+  color:#666;
+  font-weight:bold;
+}
+
+fieldset legend {
+  color:#666;
+}
+
+fieldset a*, .formFields a* {
+  text-decoration: underline;
+}
+
+.wcQuickLinks a:link, .wcQuickLinks a:active, .wcQuickLinks a:visited {
+  text-align:right;
+  font-weight:bold;
+  font-size: 9pt;
+  color: #666;
+  line-height:18px;
+}
+
+.wcQuickLinks a:hover {
+  text-decoration: underline;
+  color:#c30;
+}
+
+body, form {
+  margin:0;
+  padding:0;
+}
+
+body {
+	border: 0;
+	background-color: #FFF;
+}
+
+div.popup {
+    border-top:Solid 2px #C30;
+    border-left:Solid 2px #C30;
+    border-bottom:Solid 2px #C30;
+    border-right:Solid 2px #C30;
+}
+
+.tabTitle {
+    padding:5px;
+}
+
+/* ###################################### */
+/* #### DEFAULT STYLES ################## */
+/* ###################################### */
+
+
+/* ####################################### */
+/* #### HEADER & FOOTER STYLES ########### */
+/* ####################################### */
+.header {
+	background-image: url(../images/OASIS-logo.gif);
+	background-repeat: no-repeat;
+	background-color: #669acc;
+	text-align: right;
+	padding: 2px 0px 10px 0px;
+	height: 55px;
+	color: #FFF;
+}
+
+.headerLogoTips {
+    z-index:0;
+    position:absolute;
+    top:1px;
+    left:10px;
+    width:200px;
+    height:50px;
+}
+
+.headerEnvInfo {
+    z-index:0;
+    position:absolute;
+    top:25px;
+    left:550px;
+    text-align: left;
+    color: #cc0033;
+/*    text-transform: capitalize;      */
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.btHdr {
+	color: rgb(109,176,63);
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 16px;
+	background-image: url(../images/bt-logoff.gif);
+	background-repeat: no-repeat;
+	background-color: #669acc;
+	border: 0px;
+	cursor: hand;
+	width: 43px;
+	height: 19px;
+}
+
+.footer, .footerPopup {
+	margin: 10px;
+	padding-right: 34px;
+	background-image: url(../images/logo-ftr.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+	height: 50px;
+	line-height: 30px;
+	text-align: right;
+	color: #999;
+	font-size: 11px;
+}
+.footerPopup {
+	height: 30px !important;
+}
+.footerLogin {
+	margin: 10px;
+	padding-right: 34px;
+	margin-top: 100px;
+	background-image: url(../images/logo-ftrlogin.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+	width: 500px;
+	height: 50px;
+	line-height: 30px;
+	text-align: right;
+	color: #FFF;
+	font-size: 11px;
+}
+
+
+/* ##################################### */
+/* #### COMMON STYLES ################## */
+/* ##################################### */
+.centerWrapper {
+  text-align:center;
+}
+
+.error {
+	border-top: 3px solid rgb(109,176,63);
+	border-right: 3px solid rgb(109,176,63);
+	border-bottom: 3px solid rgb(109,176,63);
+	border-left: 22px solid rgb(109,176,63);
+	margin-bottom: 14px;
+	padding: 6px;
+}
+
+.errormessage {
+    padding-left:20px;
+    font-size: 8pt;
+    background: url("../images/error.gif") no-repeat;
+}
+
+.warningmessage {
+    padding-left:20px;
+    font-size: 8pt;
+    background: url("../images/warning.gif") no-repeat;
+}
+
+.infomessage {
+    padding-left:20px;
+    font-size: 8pt;
+    background: url("../images/info.gif") no-repeat;
+}
+
+
+
+/* ##################################### */
+/* #### COMMON STYLES ################## */
+/* ##################################### */
+
+
+/* ###################################### */
+/* #### LOG IN ########################## */
+/* ###################################### */
+.loginBody {
+  background-color: #7fb1e4;
+}
+
+.mainLogin {
+	margin-right: auto;
+	margin-left: auto;
+	background-repeat: no-repeat;
+	width: 563px;
+	height: 280px;
+  text-align:left;
+}
+
+.envLogin {
+    margin-right: auto;
+	margin-left: auto;
+	background-repeat: no-repeat;
+	width: 550px;
+	height: 45px;
+}
+
+.loginEnvInfo {
+    position:relative;
+    top:9px;
+    text-align: center;
+    color: #DC143C;
+/*    text-transform: capitalize;      */
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.loginLeft {
+	float: left;
+	padding-top: 50px;
+	padding-left: 16px;
+	height: 170px;
+}
+.loginRight {
+	float: left;
+	padding-top: 50px;
+	padding-left: 60px;
+	height: 170px;
+}
+.loginTxt {
+	width: 530px;
+  margin-top:40px;
+}
+
+.loginTop {
+  width: 560px;
+  margin-top: 90px;
+  margin-left:0px;
+  padding:0;
+  text-align:left;
+}
+
+.loginFooter {
+	margin: 5px;
+	padding-right: 34px;
+	margin-top: 20px;
+	background-image: url(../images/logo-ftrlogin.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+	width: 535px;
+	height: 30px;
+	line-height: 30px;
+	text-align: right;
+	color: #FFF;
+	font-size: 11px;
+}
+
+ul.login {
+  margin:0;
+  padding:0;
+  padding-left:15px;
+}
+
+ul.login li {
+  list-style-image:url(../images/ico-arrow-link-white.gif);
+  vertical-align:middle;
+  padding:0;
+  margin:0;
+}
+/* ###################################### */
+/* #### LOG IN ########################## */
+/* ###################################### */
+
+/* ############################################### */
+/* #### PAGE HEADER STYLES ####################### */
+/* ############################################### */
+.pageHeader {
+  width:100%;
+  margin:0;
+  padding-bottom:10px;
+  vertical-align:middle;
+}
+
+.pageTitle {
+	float: left;
+	color: #666;
+	font-size: 17px;
+	font-weight: bold;
+	width: 280px;
+}
+
+.pageHeaderText {
+	float: left;
+	font-size: 14px;
+}
+
+.globalActionItems, .globalDropdownActionItems {
+  float:left;
+  width:365px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.globalDropdownActionItems {
+  padding-left:30px;
+  background-image:url('../images/ico-folder.gif');
+  background-repeat:no-repeat;
+  background-position:left;
+}
+
+.globalActionItemList {
+  color: #999;
+  font-weight: bold;
+  width:50%;
+}
+
+.pageNextPrevLinks {
+  float:left;
+  color: #666;
+  width:170px;
+}
+
+.pagePreviousLink {
+  background-image:url('../images/ico-arrow-pg-lft.gif');
+  background-repeat:no-repeat;
+  width:16px;
+  padding-left:16px;
+}
+
+.pageNextLink {
+  background-image:url('../images/ico-arrow-pg-rgt.gif');
+  background-repeat:no-repeat;
+  width:16px;
+  padding-left:16px;
+}
+
+.pageBackLink {
+  float:left;
+  width:155px;
+  padding-left:5px;
+  border:1px solid #fff;
+}
+
+a.pageBackLink:link, a.pageBackLink:visited {
+  color: #369;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a.pageBackLink:hover {
+  color: #036;
+  text-decoration: underline;
+}
+
+.pagePrintHelpLinks {
+  float: right;
+  padding-left:5px;
+}
+
+a.txtSmallBlue:link, a.txtSmallBlue:visited {
+  color: #369;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+a.txtSmallBlue:hover {
+  color: #036;
+  text-decoration: underline;
+}
+
+/* ############################################### */
+/* #### PAGE HEADER STYLES ####################### */
+/* ############################################### */
+
+/* ############################################### */
+/* #### COLORED TEXT ############################# */
+/* ############################################### */
+.txtGreyNormal {
+	color: #666;
+	font-weight: bold;
+}
+.txtGreyRight {
+	color: #666;
+	padding-right: 4px;
+}
+.txtGreyBold, .infomessage {
+	color: #666;
+	font-weight: bold;
+}
+.txtBlueBold, .oasis_formlabelreq, .warningmessage {
+	color: #036;
+	font-weight: bold;
+}
+.txtBlueBold11px {
+	font-size: 11px;
+	color: #036;
+}
+.txtWhite {
+	color: #FFF;
+}
+.txtWhiteBold {
+    color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+.txt1stLine {
+	color: #666;
+	font-size: 16px;
+	font-weight: bold;
+}
+.txt2ndLine {
+	color: #333;
+	font-size: 16px;
+	font-weight: bold;
+}
+.txtOrange, .errortext, .errormessage, .locktext {
+	color: #C30;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.oasis_formlabel {
+  color: #036;
+}
+
+.errormessage {
+    padding-left:20px;
+    font-size: 8pt;
+    background: url("../images/error.gif") no-repeat;
+}
+
+.warningmessage {
+    padding-left:20px;
+    font-size: 8pt;
+    background: url("../images/warning.gif") no-repeat;
+}
+
+.infomessage {
+    padding-left:20px;
+    font-size: 8pt;
+    background: url("../images/info.gif") no-repeat;
+}
+
+.locktext {
+    padding-left:17px;
+    background: url("../images/lock.gif") no-repeat;
+    border-left:3px solid #fff;
+    vertical-align:middle;
+}
+
+.txtNegativeNumber, .txtBoldNegativeNumber {
+    color: #C30;
+}
+
+.txtBoldNegativeNumber {
+    font-weight:bold;
+}
+
+/* ############################################### */
+/* #### COLORED TEXT ############################# */
+/* ############################################### */
+.redText {
+    color: red;
+}
+
+.blueText {
+    color: blue;
+}
+
+/* ####################################### */
+/* #### TEXT ############################# */
+/* ####################################### */
+.txtBoldRight {
+	font-weight: bold;
+	padding-right: 4px;
+}
+
+.txtBold {
+	font-weight: bold;
+}
+
+.txtLeft {
+	text-align: left;
+}
+.txtRight {
+	text-align: right;
+}
+/* ####################################### */
+/* #### TEXT ############################# */
+/* ####################################### */
+
+
+/* ######################################### */
+/* #### DATA ENTRY ######################### */
+/* ######################################### */
+
+.noEntryFinder {
+    border: 1px solid #999;
+    background-color: #F5F5F5;
+    color: #696969;
+    min-height: 16px;
+    height: 20px;
+}
+
+.noEntryFinderReq {
+    border: 1px solid #999;
+    background-color: #d9e2ea;
+    color: #999;
+    min-height: 16px;
+    height: 20px;
+    font-weight:bold;
+}
+
+.noEntryReq {
+   background-color: #d9e2ea;
+   height:20px;
+   border: 1px solid #999;
+   text-align: right;
+}
+
+.readonlyMode {
+    background-color: #d9e2ea;
+    border: 1px solid #999;
+    text-align: left;
+}
+
+input.disabled {
+    background-color: #F5F5F5;
+    height:20px;
+    border: 1px solid #999;
+    text-align: right;
+}
+
+A.noEntryFinder:link, A.noEntryFinder:visited, A.noEntryFinder:hover, A.noEntryFinder:active,
+A.noEntryFinderReq:link, A.noEntryFinderReq:visited, A.noEntryFinderReq:hover, A.noEntryFinderReq:active,
+A.noEntryReq:link, A.noEntryReq:visited, A.noEntryReq:hover, A.noEntryReq:active{
+  border:none;
+  background-color:#fff;
+  height:18px;
+}
+
+/* ######################################### */
+/* #### DATA ENTRY ######################### */
+/* ######################################### */
+
+/* #################################### */
+/* #### FORMS ######################### */
+/* #################################### */
+
+.mainForm, .blueForm, .yellowForm, input.oasis_formfieldreq, span.oasis_formfieldreq {
+	color: #999;
+	font-weight: bold;
+	min-height: 16px;
+	_height: 19px;
+}
+
+.blueForm {
+	background-color: #deeefd;
+	border: 1px solid #999;
+}
+
+.yellowForm {
+	background-color: #ffcc33;
+	border: 1px solid #999;
+	color: #666 !important;
+}
+
+input.oasis_formfieldreq {
+  color:black;
+  background-color: #deeefd;
+  height:20px;
+  border: 1px solid #999;
+}
+
+input.oasis_formfieldreqright {
+  color:black;
+  background-color: #deeefd;
+  height:20px;
+  border: 1px solid #999;
+  text-align: right;
+}
+
+input.oasis_fieldunderline {
+  text-decoration: underline;
+}
+
+span.oasis_formfieldreq {
+  font-weight: normal;
+  color:black;
+  background-color: #fff;
+  height:16px;
+}
+
+select.oasis_formfieldreq {
+    color:black;
+	font-weight: bold;
+	background-color: #deeefd;
+}
+
+textarea.oasis_formfieldreq {
+    color:black;
+	font-weight: bold;
+	background-color: #deeefd;
+}
+
+/* #################################### */
+/* #### FORMS ######################### */
+/* #################################### */
+
+
+/* ###################################### */
+/* #### LINKS ########################### */
+/* ###################################### */
+a.lkHdr:link, a.lkHdr:visited {
+	background-image: url(../images/ico-arrow-link-white.gif);
+	background-repeat: no-repeat;
+	padding-left: 13px;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+a.lkHdr:hover {
+	text-decoration: underline;
+}
+
+a.lkDark:link, a.lkDark:visited {
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.lkDark:hover {
+	text-decoration: underline;
+}
+
+a.lkWhite:link, a.lkWhite:visited {
+	color: #fff;
+  font-size:11px;
+  font-weight: normal;
+	text-decoration: none;
+}
+a.lkWhite:hover {
+	text-decoration: underline;
+}
+/* ###################################### */
+/* #### LINKS ########################### */
+/* ###################################### */
+
+
+/* ###################################### */
+/* #### GRID RELATED STYLES ############# */
+/* ###################################### */
+
+div.divGridHolder {
+  border:1px solid #9cafc0;
+  min-width: 955px;
+  width:955px;
+  overflow: auto;
+  height: 310px;
+  margin-top:5px;
+}
+
+div.divGrid {
+  POSITION: relative;
+  top:-3px;
+  BORDER-TOP: #808080 3px solid;
+  PADDING-BOTTOM: 10px;
+  OVERFLOW: auto;
+}
+
+TABLE.clsGrid
+{
+    border-collapse: collapse;
+    border:none;
+}
+
+TABLE.clsGrid TH
+{
+    position:relative;
+    background-color: #6699cc;
+    color: #FFF;
+    font-size: 9px;
+    border:none;
+    border-right: 1px solid #9cafc0;
+    line-height: 22px;
+    top: expression(parentNode.parentNode.parentNode.parentNode.scrollTop-2); /* IE5+ only */
+    z-index: 20;
+}
+
+TABLE.clsGrid a* {
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+TABLE.clsGrid a textarea {
+    white-space: pre-wrap;
+}
+
+A.gridheader:link {
+    font-weight: bold;
+    color: #FFF;
+    font-size: 9px;
+    text-decoration: none;
+}
+A.gridheader:visited {
+    font-weight: bold;
+    color: #FFF;
+    font-size: 9px;
+    text-decoration: none;
+}
+A.gridheader:active {
+    text-decoration: none;
+}
+A.gridheader:hover {
+    text-decoration: none;
+    color: Black;
+}
+
+TABLE.clsGrid TR
+{
+    BORDER-RIGHT: #93bee2 0px solid;
+    BORDER-TOP: #93bee2 0px solid;
+    BORDER-LEFT: #93bee2 0px solid;
+    BORDER-BOTTOM: #93bee2 0px solid;
+    height:22px;
+}
+
+TABLE.clsGrid TD
+{
+  line-height: 22px;
+  padding-left: 10px;
+  font-size: 10px;
+  border:none;
+}
+
+.hiliteRow {
+    padding-left: 10px;
+    background-color: #c2dcf5;
+    color:white;
+}
+
+.alternate_colors_one {
+    padding-left: 10px;
+    background-color: #F2F2F2;
+}
+.alternate_colors_two {
+    padding-left: 10px;
+    background-color: #FFF;
+}
+.hiliteSelectRow {
+    padding-left: 10px;
+    background-color: #c2dcf5;
+    color:white;
+}
+
+A.gridcontent:link, A.gridcontent, A.gridcontent span {
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: none;
+}
+A.gridcontent:visited {
+    font-weight: bold;
+    font-size: 10px;
+    text-decoration: none;
+}
+A.gridcontent:active {
+    text-decoration: none;
+}
+A.gridcontent:hover, A.gridcontent:hover span {
+    text-decoration: none;
+    color: #0099ff;
+}
+
+.gridExport {
+    float:right;
+    display:inline;
+    margin:0;
+    padding:0;
+}
+
+.gridNavSection {
+    float:right;
+    display:inline;
+    margin:0;
+    padding:0;
+    padding-right:50px;
+}
+
+.navFirst, .navPrevious, .navNext, .navLast {
+    border:0;
+    padding:0;
+    margin:0;
+    height:16px;
+    background-color:#fff;
+    cursor:hand;
+    padding-right:3px;
+}
+
+.navFirst {
+    background-image: url(../images/ico-arrow-allpg-lft.gif);
+    background-repeat: no-repeat;
+    width:18px;
+}
+
+.navPrevious{
+    background-image: url(../images/ico-arrow-pg-lft.gif);
+    background-repeat: no-repeat;
+    width:16px;
+}
+
+.navNext {
+    background-image: url(../images/ico-arrow-pg-rgt.gif);
+    background-repeat: no-repeat;
+    width:16px;
+}
+
+.navLast {
+    background-image: url(../images/ico-arrow-allpg-rgt.gif);
+    background-repeat: no-repeat;
+    width:18px;
+}
+
+#gridNavButtonsTable {
+    padding:0;
+}
+
+.gridExportButtonTable {
+    padding-left:2px;
+    padding-right:5px;
+}
+
+.gridExportButtonTable .excelExport, .gridExportButtonTable .htmlExport,
+.gridExportButtonTable .excelExportMO, .gridExportButtonTable .htmlExportMO {
+    font-weight: bold;
+    font-size: 12px;
+    padding-left:2px;
+    border:none;
+    vertical-align:middle;
+}
+
+.gridExportButtonTable .excelExport, .gridExportButtonTable .excelExportMO {
+    background: #FFF url(../images/excel_download.gif) no-repeat;
+}
+
+.gridExportButtonTable .htmlExport, .gridExportButtonTable .htmlExportMO {
+    background: #FFF url(../images/html_download.gif) no-repeat;
+}
+
+.gridExportButtonTable .excelExportMO, .gridExportButtonTable .htmlExportMO {
+    color: #0099ff;
+    border:none;
+}
+
+
+.gridNoteDisplay {
+    white-space:nowrap;
+    width:150px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* ####################################################### */
+/* #### RESERVE TAB - CURRENT RESERVE STYLES ############ */
+/* ####################################################### */
+
+table.clsGridRes {
+  font-family: Arial, Verdana, "Trebuchet MS";
+  font-size: 12px;
+  color: #666;
+}
+table.clsGridRes TH {
+    font-weight: bold;
+    background-color:#c2dcf5;
+}
+
+table.clsGridRes TD span.gridcontent {
+  color: black;
+  font-weight: bold;
+}
+
+/* ####################################################### */
+/* #### RESERVE TAB - CURRENT RESERVE STYLES ############ */
+/* ####################################################### */
+
+/* ###################################### */
+/* #### GRID RELATED STYLES ############# */
+/* ###################################### */
+
+
+/* ###################################### */
+/* #### PANEL RELATED STYLES ############ */
+/* ###################################### */
+.panel {
+    margin:0px;
+    padding:5px;
+    border:1px solid #bababa;
+    background-image: url('../images/bg-panelarea.gif');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    text-align:left;
+}
+.rateDiv {
+    margin:0px;
+    padding:5px;
+    background-image: url('../images/bg-panelarea.gif');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    text-align:left;
+    border-right-color: #bababa;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.panel #panelTitleWithBorder {
+    border-bottom: 1px solid #cedfef;
+}
+
+.panel a.panelDownTitle:link, a.panelDownTitle:visited, .panel a.panelUpTitle:link, a.panelUpTitle:visited{
+    background-image : url('../images/ico-arrow-up-hide.gif');
+    background-repeat : no-repeat;
+    padding-left:20px;
+    margin:0px;
+    text-decoration:none;
+}
+.panel a.panelDownTitle:link, a.panelDownTitle:visited {
+    background-image : url('../images/ico-arrow-down-hide.gif');
+    background-repeat : no-repeat;
+}
+.panel a.panelUpTitle:link, a.panelUpTitle:visited{
+    background-image : url('../images/ico-arrow-up-hide.gif');
+    background-repeat : no-repeat;
+}
+.panel span.panelTitle {
+    color: #666;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration:none;
+}
+.panel #panelDownContent {
+    margin:0;
+}
+/* ###################################### */
+/* #### PANEL RELATED STYLES ############ */
+/* ###################################### */
+
+/* ################################### */
+/* #### HEADER DATA STYLES ########### */
+/* ################################### */
+
+.headerDataFieldsBorder, .headerDataFieldsNoBorder,
+    .headerDataFieldsFirstColBorder,
+    .headerDataFieldsSecondColBorder,
+    .headerDataFieldsThirdColNoBorder,
+    .headerDataFieldsDisplayAtBottom
+{
+	width: 300px;
+/*	_height: 120px;
+	min-height: 120px; 	*/
+	padding: 10px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	float: left;
+    vertical-align: top;
+}
+.headerDataFieldsBorder,
+    .headerDataFieldsFirstColBorder,
+    .headerDataFieldsSecondColBorder  {
+	border-right: 1px solid #c1d5ed;
+    height: 100%;
+}
+
+.headerDataLabelCell,
+    .headerDataLabelCellFirstColLabel,
+    .headerDataLabelCellSecondColLabel,
+    .headerDataLabelCellThirdColLabel,
+    .readonlyHeaderDataLabelCellFirstColLabel,
+    .readonlyHeaderDataLabelCellSecondColLabel,
+    .readonlyHeaderDataLabelCellThirdColLabel,
+    .editableHeaderDataLabelCellFirstColLabel,
+    .editableHeaderDataLabelCellSecondColLabel,
+    .editableHeaderDataLabelCellThirdColLabel {
+	text-align: right;
+    width: 25%;
+    white-space: nowrap;
+}
+
+.headerDataLabelSpan {
+    color: #036;
+    padding-right: 4px;
+}
+
+.headerDataLabelCellDisplayAtBottom {
+    text-align: left;
+}
+
+/* ################################### */
+/* #### HEADER DATA STYLES ########### */
+/* ################################### */
+
+
+/* ################################# */
+/* #### DIV POPUP STYLES ########### */
+/* ################################# */
+
+DIV.popup {
+    border-top:Solid 1px #6699cc;
+    border-left:Solid 1px #6699cc;
+    border-bottom:Solid 2px #6699cc;
+    border-right:Solid 2px #6699cc;
+}
+
+TD.popupheader {
+    color:white;
+    font-weight:bold;
+    background: #6699cc url("../images/bg-menu-blue.gif");
+    border-bottom:Solid 1px #6699cc;
+    height:22px;
+}
+
+A.popupheader:link, A.popupheader:link, A.popupheader:visited {
+    text-align:right;
+    font-weight:bold;
+    font-size: 8pt;
+    color: White;
+    text-decoration: none;
+    FONT-FAMILY: arial,verdana,helvetica,sans-serif;
+}
+
+A.popupheader:hover {
+    color: Black;
+}
+
+TABLE.popupcontent {
+    background: #6699cc url("../images/lines2.gif");
+}
+
+DIV.popupcontent {
+    border:Solid 1px #6699cc;
+}
+
+/* ################################# */
+/* #### DIV POPUP STYLES ########### */
+/* ################################# */
+
+
+/* #################################################### */
+/* ################# WORKK CENTER ##################### */
+/* #################################################### */
+#WorkCenter {
+    float:left;
+    background: url(../images/workcenter.gif) no-repeat;
+    background-position:left;
+    height:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.Welcome {
+    float:right;
+}
+
+.Welcome #username  {
+  font-size:13px;
+}
+
+.txtWelcome {
+    font-size:13px;
+}
+
+#wcTips {
+  text-align:right;
+}
+
+.activityHistoryHdr {
+	width: 100%;
+	background-color: #375e87;
+	border-top: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	padding-left: 10px;
+	line-height: 24px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.activityHistoryList {
+	width: 100%;
+  height: 380px;
+  border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	margin-bottom: 10px;
+  padding-top:3px;
+}
+
+.expiredOption {
+    color:tan;   
+}
+/* #################################################### */
+/* ################# WORKK CENTER ##################### */
+/* #################################################### */
+
+
+/* ############################################### */
+/* #### Field #################################### */
+/* ############################################### */
+
+/*
+
+There are are two <TD> for each field. One is for field label, the other is for field value. If the field is not in
+table, we use <SPAN> instead of <TD>.
+
+"hidden", "readonly", "editable" are class names on TD or SPAN.
+A suffix of "Label" is attached to the TD class that encloses field label.
+A suffix of "Field" is attached to the TD class that encloses the actual form field.
+
+If TD/SPAN has a class "hiddenLabel" or "hiddenField", the whole TD/SPAN is hidden
+If TD/SPAN has a class "editableLabel" or "readonlyLabel", the whole TD/SPAN is visible.
+
+These are three kinds of elements in the TD/SPAN for field value. Initially they are all displayed
+1.	Span for read-only value.                                     class ""
+2.	Input element for the field.                                  class "oasis_formfield"
+3.	Additional elements for user to edit. such as date picker     class "oasis_formfield_edit"
+
+If the TD has class "editableField", Item 1 is hidden. Item 2 and item 3 are displayed.
+If the TD has class "readonlyField", Item 2 and item 3 are hidden. Only item 1 is displayed.
+
+*/
+
+
+TD.hiddenLabel, TD.hiddenField, SPAN.hiddenLabel, SPAN.hiddenField {
+    display:none;
+}
+
+/*
+    Read only fields - first make all elements hidden by default, then show only span element.
+    Hyperlinked read-only span are enclosed withing <A> tag.
+    Hyperlinked notes icon is enclosed within <A> tag.
+    Note type fields are enclosed within <DIV> tag. The read-only behavior is controlled by a Java Script variable.
+*/
+
+TD.readonlyField *,
+SPAN.readonlyField *,
+TD.readonlyHeaderDataLabelCellFirstColField *,
+TD.readonlyHeaderDataLabelCellSecondColField *,
+TD.readonlyHeaderDataLabelCellThirdColField *,
+TD.readonlyHeaderDataLabelCellDisplayAtBottomField *{
+   display:none;
+}
+
+TD.readonlyField span, TD.readonlyField span textarea.disabledTextArea,
+TD.readonlyField A, TD.readonlyField A.notes, TD.readonlyField A.notes img,
+SPAN.readonlyField span, SPAN.readonlyField A, SPAN.readonlyField A.notes, SPAN.readonlyField A.notes img,
+TD.readonlyHeaderDataLabelCellFirstColField span, TD.readonlyHeaderDataLabelCellFirstColField A,
+TD.readonlyHeaderDataLabelCellFirstColField span textarea.disabledTextArea,
+TD.readonlyHeaderDataLabelCellFirstColField A.notes, TD.readonlyHeaderDataLabelCellFirstColField A.notes img,
+TD.readonlyHeaderDataLabelCellSecondColField span, TD.readonlyHeaderDataLabelCellSecondColField A,
+TD.readonlyHeaderDataLabelCellSecondColField span textarea.disabledTextArea,
+TD.readonlyHeaderDataLabelCellSecondColField A.notes, TD.readonlyHeaderDataLabelCellSecondColField A.notes img,
+TD.readonlyHeaderDataLabelCellThirdColField span, TD.readonlyHeaderDataLabelCellThirdColField A,
+TD.readonlyHeaderDataLabelCellThirdColField span textarea.disabledTextArea,
+TD.readonlyHeaderDataLabelCellThirdColField A.notes, TD.readonlyHeaderDataLabelCellThirdColField A.notes img,
+TD.readonlyHeaderDataLabelCellDisplayAtBottomField span, TD.readonlyHeaderDataLabelCellDisplayAtBottomField A,
+TD.readonlyHeaderDataLabelCellDisplayAtBottomField span textarea.disabledTextArea {
+   display:inline;
+}
+
+TD.editableField table span ,
+SPAN.editableField table span {
+    display:none;
+}
+
+/*
+    Editable fields - hide all span elements
+    Hyperlinked read-only span are enclosed withing <A> tag.
+    Hyperlinked notes icon is enclosed within <A> tag.
+    Note type fields are enclosed within <DIV> tag. The read-only behavior is controlled by a Java Script variable.
+*/
+
+TD.editableField span, TD.editableField A,
+SPAN.editableField span, SPAN.editableField A,
+TD.editableHeaderDataLabelCellFirstColField span, TD.editableHeaderDataLabelCellFirstColField A,
+TD.editableHeaderDataLabelCellSecondColField span, TD.editableHeaderDataLabelCellSecondColField A,
+TD.editableHeaderDataLabelCellThirdColField span, TD.editableHeaderDataLabelCellThirdColField A {
+   display:none;
+}
+
+TD.editableField table span,
+TD.editableField A.oasis_formfield_edit, TD.editableField A.notes,
+TD.editableField div.oasis_formfield_edit *,
+TD.editableField A.oasis_formfield_req,
+TD.editableField div.oasis_formfield_req *,
+SPAN.editableField table span,
+SPAN.editableField A.oasis_formfield_edit, SPAN.editableField A.notes,
+SPAN.editableField div.oasis_formfield_edit *,
+SPAN.editableField A.oasis_formfield_req,
+SPAN.editableField div.oasis_formfield_req *,
+TD.editableHeaderDataLabelCellFirstColField A.oasis_formfield_edit,
+TD.editableHeaderDataLabelCellFirstColField div.oasis_formfield_edit *,
+TD.editableHeaderDataLabelCellSecondColField A.oasis_formfield_edit,
+TD.editableHeaderDataLabelCellSecondColField div.oasis_formfield_edit *,
+TD.editableHeaderDataLabelCellThirdColField A.oasis_formfield_edit,
+TD.editableHeaderDataLabelCellThirdColField div.oasis_formfield_edit * {
+    display:inline;
+}
+
+/* ############################################### */
+/* #### Field #################################### */
+/* ############################################### */
+
+/* ############################################### */
+/* #### Guided Rule ############################## */
+/* ############################################### */
+.guidedRuleWhen, .guidedRuleThen, .guidedRuleOption{
+    font-weight:bold;
+}
+
+.guidedRuleTR .guidedRuleTD {
+    padding-left: 20px;
+}
+
+.guidedRuleTR .guidedRuleButtonTD {
+    width: 10%;
+}
+
+.guidedRuleDeleteButton {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.guidedRuleDeleteButton  img {
+    border: 0px;
+}
+
+span.guidedRuleText {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+input.guidedRuleInput, select.guidedRuleInput {
+    vertical-align: middle;
+}
+
+a.guidedRuleLink img {
+    vertical-align: middle;
+    border: 0;
+    width: 16px;
+    height: 16px;
+}
+
+pre.guidedRuleInformation {
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    white-space: normal;
+    word-break: break-all;
+}
+
+span.guidedRuleFirstSpan, span.guidedRuleOtherSpan {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    vertical-align:top;
+}
+
+span.guidedRuleOtherSpan {
+    padding-left: 5px;
+}
+
+/* ############################################### */
+/* #### Guided Rule ############################## */
+/* ############################################### */
+
+
+.disabledTextArea {
+    border:1px solid #cccccc;
+    color: #999999;
+}
+
+.enabledTextArea {
+    border:1px solid #6699cc;
+    color:black;
+    background-color: #ffffff;
+}

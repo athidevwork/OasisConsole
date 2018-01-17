@@ -7,12 +7,12 @@ package com.delphi.rest.entity;
  * @author Athi
  *
  */
-public class SystemParameterUtil {
+public class SystemParameterUtilType {
 	String code;
 	String value;
 	String description;
 	
-	public SystemParameterUtil(String code, String value, String description) {
+	public SystemParameterUtilType(String code, String value, String description) {
 		super();
 		this.code = code;
 		this.value = value;

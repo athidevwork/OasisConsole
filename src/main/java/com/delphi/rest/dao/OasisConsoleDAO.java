@@ -1,7 +1,8 @@
 package com.delphi.rest.dao;
 
-import com.delphi.rest.entity.OasisConfig;
+import com.delphi.rest.entity.OasisConfigType;
 
 public interface OasisConsoleDAO {
-	public OasisConfig getConfig();
+	//public OasisConfigType getConfig();
+	public OasisConfigType getConfig(String env);
 }
