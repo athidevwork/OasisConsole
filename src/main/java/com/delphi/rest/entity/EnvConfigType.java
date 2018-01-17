@@ -3,6 +3,7 @@
  */
 package com.delphi.rest.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -13,24 +14,24 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class EnvConfigType {
-	List<OasisConfigType> oc;
+	List<OasisConfigType> oasisConfig = new ArrayList<OasisConfigType>();
 
 	public EnvConfigType () {}
 	
-	public List<OasisConfigType> getOc() {
-		return oc;
+	public List<OasisConfigType> getOasisConfig() {
+		return oasisConfig;
 	}
 
-	public void setOc(List<OasisConfigType> oc) {
-		this.oc = oc;
+	public void setOasisConfig(List<OasisConfigType> oasisConfig) {
+		this.oasisConfig = oasisConfig;
 	}
-
+	
 	public void addConfig (OasisConfigType oc) {
-		this.oc.add(oc);
+		this.oasisConfig.add(oc);
 	}
 	
 	@Override
 	public String toString() {
-		return "EnvConfigType [oc=" + oc + "]";
+		return "EnvConfigType [oasisConfig=" + oasisConfig + "]";
 	}	
 }

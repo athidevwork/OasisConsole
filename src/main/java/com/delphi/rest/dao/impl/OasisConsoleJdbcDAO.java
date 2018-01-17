@@ -100,6 +100,7 @@ public class OasisConsoleJdbcDAO implements OasisConsoleDAO {
 		dir.setSystemParameterUtil(list);		
 		
 		OasisConfigType config = new OasisConfigType();
+		config.setEnv(env);
 		config.setOds(ods);
 		config.setOs(os);
 		config.setOws(ows);

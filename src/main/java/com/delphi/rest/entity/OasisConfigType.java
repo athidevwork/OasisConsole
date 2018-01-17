@@ -11,11 +11,20 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class OasisConfigType {
+	String env;
 	DirType dir;
 	OSType os;
 	ODSType ods;
 	OWSType ows;
 	
+	public String getEnv() {
+		return env;
+	}
+
+	public void setEnv(String env) {
+		this.env = env;
+	}
+
 	public OasisConfigType() {
 		super();
 	}
@@ -54,6 +63,6 @@ public class OasisConfigType {
 
 	@Override
 	public String toString() {
-		return "OasisConfigType [dir=" + dir + ", os=" + os + ", ods=" + ods + ", ows=" + ows + "]";
+		return "OasisConfigType [env=" + env + ", dir=" + dir + ", os=" + os + ", ods=" + ods + ", ows=" + ows + "]";
 	}
 }

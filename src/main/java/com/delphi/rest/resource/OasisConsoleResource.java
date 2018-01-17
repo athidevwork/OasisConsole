@@ -91,7 +91,8 @@ public class OasisConsoleResource {
 	  for (String env : envSupported) {
 		  LOGGER.debug("Running for env : " + env);
 		  OasisConfigType config = service.getConfig(env);
-		  LOGGER.debug("config = " + config);
+		  //config.setEnv(env);
+		  LOGGER.debug("config = " + config);		  
 		  envConfigType.addConfig(config);
 	  }
 	  return Response.ok().entity(envConfigType).build();
@@ -109,6 +110,7 @@ public class OasisConsoleResource {
 	  StringBuilder sb = new StringBuilder();
 	  for (String env : envSupported) {
 		  OasisConfigType config = service.getConfig(env);
+		  sb.append("<p></p>").append("<h2>").append(config.getEnv()).append("</h2>");
 		  sb.append(OasisConsoleUtil.translateConfigBlock2Html(config, env));
 	  }
 	  html = html + sb.toString() + "</body></html>";
