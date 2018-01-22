@@ -1,6 +1,6 @@
 # OasisConsole
 
-#####Oasis Admin Console will be used to get config and other data for Oasis application deployed on the server.
+##### Oasis Admin Console will be used to get config and other data for Oasis application deployed on the server.
 
 This tool is built on restful api exposing the config data from database and reads the config data from properties.
 
