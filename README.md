@@ -1,12 +1,12 @@
 # OasisConsole
 
-######Oasis Admin Console will be used to get config and other data for Oasis application deployed on the server.
+#####Oasis Admin Console will be used to get config and other data for Oasis application deployed on the server.
 
 This tool is built on restful api exposing the config data from database and reads the config data from properties.
 
 There is a web context also exposed in the project that would serve as the GUI.
 
-##Assumptions
+## General Assumptions
 Developer is expected to have java, gradle, git setup in his machine to start development of this project.
 
 Eclipse IDE was used to develop this project. So it would be easier to view this using eclipse, but is not limited to use that IDE.
@@ -19,10 +19,10 @@ To get the project from github, type in the command below,
 ## Build
 Oasis Console Tool is built using gradle.
 
-###Build the project
+### Build the project
 > ./gradlew build
 
-###Run the project/server
+### Run the project/server
 > ./gradlew run
 
 ## Deploy
@@ -36,7 +36,7 @@ Oasis Console GUI would show up if the following URL is entered in a browser. Se
 
 ## Test for Restful API
 
-###Config Restful api would be tested using curl.
+### Config Restful api can be tested using curl or any rest client.
 
 #### Get json response
 > curl -H "application/json" http://localhost:2222/rest/oasisconsole/config/mag20171se
@@ -48,7 +48,7 @@ Oasis Console GUI would show up if the following URL is entered in a browser. Se
 > curl -H "text/html" http://localhost:2222/rest/oasisconsole/htmlconfig/mag20171se
 
 
-###Issue Restful api would be tested using curl.
+###Issue Restful api can be tested using curl or any rest client.
 
 #### Get json response
 > curl -H "application/json" http://localhost:2222/rest/oasisissue/policy?env=wvmic20141qa&policy=PL402919
