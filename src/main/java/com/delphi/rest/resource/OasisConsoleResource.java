@@ -18,6 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import com.delphi.rest.config.SpringApplicationContext;
 import com.delphi.rest.entity.EnvConfigType;
+import com.delphi.rest.entity.EnvSupportedType;
 import com.delphi.rest.entity.OasisConfigType;
 import com.delphi.rest.service.OasisConsoleService;
 import com.delphi.rest.util.OasisConsoleUtil;
@@ -59,6 +60,15 @@ public class OasisConsoleResource {
 		return OasisConsoleUtil.getEnvironments();
 	}
 
+	@GET
+	@Path("/envsupported")
+	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON, MediaType.TEXT_PLAIN, MediaType.TEXT_HTML })
+	public Response getEnvSupported() {
+		EnvSupportedType envSupported = new EnvSupportedType();
+		envSupported.setEnv(OasisConsoleUtil.getEnvironments());
+		return Response.ok().entity(envSupported).build();
+	}
+	
 	@GET
 	@Path("/link")
 	@Produces({ MediaType.TEXT_PLAIN })

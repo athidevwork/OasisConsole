@@ -12,7 +12,6 @@ function getIssuePolicy(env, policy) {
 	    success: function(response) {
 	    	console.log(response);
 	    	document.getElementById('policydata').innerHTML = response;
-
 	    },
 	    error: function(xhr) {
 	    	console.log ("Failure occurred during table generation : " + data);
@@ -25,18 +24,15 @@ function getLink(env, product) {
 	
 	$.ajax({
 	    url: restUrl,
-	    //data: {"first": "Manu","Last":"Sharma"},
 	    data: {"env": env,"product":product},
 	    success: function(response) {
 	    	console.log(response);
-	        //change href with the new link
-	    	  document.getElementById(product).onclick = function() {
-	    		    document.getElementById(product).href=response; 
-	    		    return false;
-	    	  };
+	    	document.getElementById(product).onclick = function() {
+	    		document.getElementById(product).href=response; 
+	    		return false;
+	    	};
 	    },
 	    error: function(xhr) {
-	        //Do Something to handle error
 	    	console.log ("Failure occurred during processing link : " + data);
 	    }
 	});	
@@ -57,7 +53,6 @@ function getConfig(env, outputFormat) {
         type: 'GET',
         url: restUrl,
         dataType: outputFormat,
-        //dataType: "text",
         success: function(data){
             console.log("rest response: " + data);
             //console.log("format =" + outputFormat);

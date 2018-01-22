@@ -44,6 +44,15 @@
     $( "#getform" ).click( function( event ) {
     	alert ("getting form data!");
     } ); 
+
+    $( "#getconfig" ).click( function( event ) {
+    	alert ("getting config data!");
+    	getConfig(env.val(), html);
+    } );
+    
+    $( "#gettools" ).click( function( event ) {
+    	alert ("getting tools data!");
+    } ); 
     
   } );
   </script>
@@ -75,11 +84,11 @@
   <h3>Policy Data</h3>
   <div id="policydatatab">
     <p>
-    <p><label for="policyno">Policy #:</label><input id="policyno" title="Policy Number.">
+    <p><label for="policyno">Policy #:</label><input id="policyno" title="Enter Policy Number.">
     </p>
     <p>
     <p>
-    <p><label for="txno">Transaction #:</label><input id="txno" title="Transaction Number.">
+    <p><label for="txno">Transaction #:</label><input id="txno" title="Enter Transaction Number.">
     </p>
     <p id="policydata">
     Placeholder to show the database data for policy, policy term history and transaction. 

@@ -43,12 +43,9 @@ function makeTable(container, data) {
 function writeToFile(output){
 
 	var fso = new ActiveXObject("Scripting.FileSystemObject");
-
 	var fh = fso.OpenTextFile("issue.txt", 8, false, 0);
 
 	fh.WriteLine(output);
-
 	fh.Close();
-
 }
 
