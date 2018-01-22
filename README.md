@@ -48,7 +48,7 @@ Oasis Console GUI would show up if the following URL is entered in a browser. Se
 > curl -H "text/html" http://localhost:2222/rest/oasisconsole/htmlconfig/mag20171se
 
 
-###Issue Restful api can be tested using curl or any rest client.
+### Issue Restful api can be tested using curl or any rest client.
 
 #### Get json response
 > curl -H "application/json" http://localhost:2222/rest/oasisissue/policy?env=wvmic20141qa&policy=PL402919
