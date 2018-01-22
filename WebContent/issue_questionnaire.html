@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Issue Questionnaire</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+    
+    $( "#savedata" ).click( function( event ) {
+    	alert ("got save!");
+    	
+    	var output = 'Environment = ' + $( "#env" ).val()
+    			 'Policy Data :' + $( "#policydata" ).val()
+    			 'Policy No : ' + $( "#policyno" ).val()
+    			 'Transaction No : ' + $( "#txno" ).val()
+    			 'Form No :' +  $( "#formno" ).val()
+    			 'Problem Description: ' +  $( "#desc" ).val();
+    	writeToFile(output);
+        event.preventDefault();
+      } );
+
+    $( "#getpolicy" ).click( function( event ) {
+    	alert ("getting policy data!");
+    	var env = $( "#env" ).val();	
+    	var policyno = $( "#policyno" ).val();	  
+    	var txno = $( "#txno" ).val();
+    	
+    	console.log ("policyno=" + policyno);
+    	console.log ("txno=" + txno);
+    	
+    	//document.getElementById('policydata').innerHTML = 'policy =' + policyno + ", trans=" + txno;
+    	document.getElementById('policydata').innerHTML = '<table border=3><tr><th>Policy No</th><th>Transaction</th></tr>'+
+    														'<tr><td>' + policyno + '</td><td>' + txno + '</td></tr></table>';
+    	getIssuePolicy(env, policyno);
+        event.preventDefault();
+      } );   
+    
+    $( "#getform" ).click( function( event ) {
+    	alert ("getting form data!");
+    } ); 
+    
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="accordion">
+  <h3>Environment</h3>
+  <div id="env">
+  	<p>
+	<label for="desc">Problem Description</label>
+	<textarea id="desc" rows="9" cols="100" title="Please explain the problem in detail of when you think it happened and what were you doing when this happened.">
+	</textarea>  	
+  	</p>
+  	<p>
+	<label for="env">Oasis Environment</label>
+    <select name="env" id="env">
+      <option selected="selected">-SELECT-</option>
+      <option>tmlt20161se</option>
+      <option>mag20171se</option>
+      <option>norcal20171se</option>
+      <option>wvmic20141qa</option>
+    </select>
+    </p>
+    <p id="dbpath">
+    This would show the environment specific variables or db path for the database where the issue is on.
+    </p>
+  </div>
+  <h3>Policy Data</h3>
+  <div id="policydatatab">
+    <p>
+    <p><label for="policyno">Policy #:</label><input id="policyno" title="Policy Number.">
+    </p>
+    <p>
+    <p>
+    <p><label for="txno">Transaction #:</label><input id="txno" title="Transaction Number.">
+    </p>
+    <p id="policydata">
+    Placeholder to show the database data for policy, policy term history and transaction. 
+    </p>
+	<p></p>
+	<input id="getpolicy" type="button" value="Get Policy Data">     
+  </div>
+  <h3>Form Data</h3>
+  <div id="formdatatab">
+    <p>
+    <p><label for="formno">Form #:</label><input id="formno" title="Enter a single form or Form starting with Characters.">
+    </p>  
+    <p id="formdata">
+    This would show all the form data for the form given above
+    </p>
+    <ul>
+      <li>OS Form</li>
+      <li>OS Form Map</li>
+      <li>OS Form Copy Type</li>
+    </ul>
+    <p></p>
+	<input id="getform" type="button" value="Get Form Data">  
+  </div>
+  <h3>System Parameters, ODS, Ghost Draft, Eloquence</h3>
+  <div id="configdatatab">
+    <p id="configdata">
+	This would show all the config data in the env
+    </p>
+    <p></p>
+	<input id="getconfig" type="button" value="Get Config Data">  
+    <p id="thirdpartytoolsdata">
+    This would be all config for thirdparty tools. 
+    </p>
+    <p></p>
+	<input id="gettools" type="button" value="Get Thirdparty Tools Data"> 
+  </div>
+</div>
+<p></p>
+<input id="savedata" type="button" value="Save Data"> 
+ 
+</body>
+</html>

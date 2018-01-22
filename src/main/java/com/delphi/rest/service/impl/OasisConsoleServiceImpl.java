@@ -5,8 +5,6 @@ package com.delphi.rest.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import com.delphi.rest.config.SpringApplicationContext;
@@ -37,5 +35,4 @@ public class OasisConsoleServiceImpl implements OasisConsoleService {
 		OasisConfigType config = dao.getConfig(env);
 		return config;
 	}
-
 }

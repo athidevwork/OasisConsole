@@ -4,6 +4,7 @@
 package com.delphi.rest.server;
 
 import org.eclipse.jetty.server.Handler;
+import org.eclipse.jetty.server.NCSARequestLog;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 import org.eclipse.jetty.server.handler.DefaultHandler;
@@ -57,12 +58,18 @@ public class OasisConsoleServer {
 		config.register(JsonMappingExceptionMapper.class);
 		config.register(JsonParseExceptionMapper.class);
 
+		NCSARequestLog requestLog = new NCSARequestLog("./logs/jetty-yyyy_mm_dd.log");
+		requestLog.setAppend(true);
+		requestLog.setExtended(true);
+		requestLog.setLogLatency(true);		
+		requestLog.setLogTimeZone("EST");
+		requestLog.setRetainDays(90);
+
+		server.setRequestLog(requestLog);
+		
         ServletContextHandler restContext = new ServletContextHandler(ServletContextHandler.SESSIONS);
         restContext.setContextPath("/rest");
         restContext.addServlet(new ServletHolder(new ServletContainer(config)), "/*");
-        /*context0.addServlet(new ServletHolder(new HelloServlet()),"/*");
-        context0.addServlet(new ServletHolder(new HelloServlet("Buongiorno Mondo")),"/it/*");
-        context0.addServlet(new ServletHolder(new HelloServlet("Bonjour le Monde")),"/fr/*");*/
  
         String jetty_home = 
                 System.getProperty("jetty.home","../jetty-distribution/target/distribution");
@@ -106,6 +113,8 @@ public class OasisConsoleServer {
 			
 			//LOGGER.debug(OasisConsoleUtil.getAllProperties().toString());
 			LOGGER.debug(OasisConsoleUtil.getEnvironments().toString());
+			LOGGER.debug(OasisConsoleUtil.getAllLinks().toString());
+			//LOGGER.debug(OasisConsoleUtil.getLinksForEnv("mag20171se").toString());
 		    server.start();
 		    server.join();
 		 } catch (Exception e) {

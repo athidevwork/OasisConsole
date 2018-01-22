@@ -6,11 +6,13 @@ a:visited {color: green}
 fieldset {
   border: 1;
 }
+
 label {
   display: block;
   float: left;
   margin: 10px 0 0 0;
 }
+
 select {
 	margin: 10px 10px 10px 0;
 }

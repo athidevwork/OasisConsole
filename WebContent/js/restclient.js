@@ -1,25 +1,94 @@
 // The root URL for the RESTful services
-var rootURL = "http://localhost:2222/rest/oasisconsole/";
+var rootURL = "http://localhost:2222/rest/oasisconsole";
+var issueRootURL = "http://localhost:2222/rest/oasisissue/html";
+
+function getIssuePolicy(env, policy) {
+	var restUrl = rootURL + '/policy?env=' + env + '&policy=' + policy;
+	console.log(restUrl);
+	
+	$.ajax({
+	    url: restUrl,
+	    dataType: "json",
+	    success: function(response) {
+	    	console.log(response);
+	    	document.getElementById('policydata').innerHTML = response;
+
+	    },
+	    error: function(xhr) {
+	    	console.log ("Failure occurred during table generation : " + data);
+	    }
+	});	
+}
+
+function getLink(env, product) {
+	var restUrl = rootURL + '/link';
+	
+	$.ajax({
+	    url: restUrl,
+	    //data: {"first": "Manu","Last":"Sharma"},
+	    data: {"env": env,"product":product},
+	    success: function(response) {
+	    	console.log(response);
+	        //change href with the new link
+	    	  document.getElementById(product).onclick = function() {
+	    		    document.getElementById(product).href=response; 
+	    		    return false;
+	    	  };
+	    },
+	    error: function(xhr) {
+	        //Do Something to handle error
+	    	console.log ("Failure occurred during processing link : " + data);
+	    }
+	});	
+}
 
 function getConfig(env, outputFormat) {
 	var restUrl = '';
-	
-	if (outputFormat == "html")
-		url = rootURL + '/htmlconfig/' + env;
+		
+	if (outputFormat.trim() === "HTML")
+		restUrl = rootURL + '/htmlconfig/' + env;
 	else
-		url	= rootURL + '/config/' + env;
+		restUrl	= rootURL + '/config/' + env;
 	
-	console.log ("rest url : " + url)
+	console.log ("var env = " + env);
+	console.log ("var format = " + outputFormat);	
+	console.log ("var rest url : " + restUrl)
 	$.ajax({
         type: 'GET',
         url: restUrl,
         dataType: outputFormat,
+        //dataType: "text",
         success: function(data){
-            $('#restresponse').show();
             console.log("rest response: " + data);
-            $('#restresponse').append(JSON.stringify(data));
+            //console.log("format =" + outputFormat);
+            //$('#restresponse').show();
+            $('#restresponse').empty();
+            
+            /*var response=jQuery.parseJSON(data);
+            
+            if (typeof response =='object') {
+            	console.log ("is json");
+            	$('#restresponse').append(
+            		    $('<pre>').text(
+            		        JSON.stringify(data, null, '  ')
+            		    )
+            	 );
+            } else {
+                var xml, xmlfound=false;
+                var xmlDoc = $.parseXML( data );
+                $data = $( xmlDoc );
+                $xml.find("oasisConfigType").each(function(index,elem){
+                    console.log ("is xml");
+                	$('#restresponse').append($xml);
+                });
+            	
+            	$('#restresponse').append(data);
+            }*/
+	        $('#restresponse').append(data);
+            //$('#restresponse').append(JSON.stringify(data));
             //renderDetails(data);
-        }
+        },
+        fail: function(data){ console.log ("Failure occurred : " + data);}
     });
 }
 

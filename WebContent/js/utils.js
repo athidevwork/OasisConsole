@@ -27,3 +27,28 @@ function formatAMPM(date) {
     //the result
     return match[0] + ' ' + time;
 }
+
+function makeTable(container, data) {
+    var table = $("<table/>").addClass('CSSTableGenerator');
+    $.each(data, function(rowIndex, r) {
+        var row = $("<tr/>");
+        $.each(r, function(colIndex, c) { 
+            row.append($("<t"+(rowIndex == 0 ?  "h" : "d")+"/>").text(c));
+        });
+        table.append(row);
+    });
+    return container.append(table);
+}
+
+function writeToFile(output){
+
+	var fso = new ActiveXObject("Scripting.FileSystemObject");
+
+	var fh = fso.OpenTextFile("issue.txt", 8, false, 0);
+
+	fh.WriteLine(output);
+
+	fh.Close();
+
+}
+

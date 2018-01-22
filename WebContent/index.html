@@ -8,15 +8,8 @@
 		<meta name="keywords" content="oasis, oasis config, oasis setup"/>
 		<meta name="robots" content="index, follow"/>
 		
-		<link rel="stylesheet" href="css/dti.css" />
-		<!--<link href="/css/dti.css" rel="stylesheet" type="text/css"/>
-		<link href="/css/oasisnew.css" rel="stylesheet" type="text/css"/>
-		<link href="/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
-		<link href="/css/menu.css" rel="stylesheet" type="text/css"/>
-		<link href="/css/jmenu.css" rel="stylesheet" type="text/css"/>-->
-		
+		<link rel="stylesheet" href="css/dti.css" />		
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  		<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
   
 		<link rel="icon" href="favicon.ico"/>
 	</head>
@@ -31,10 +24,9 @@
 
 		<div id="wrapper">	
 			<div id="header">
-			    <!-- <div id="headerlogo" style="background-image:url('/images/oasislogo.gif');"></div> -->
 				<div id="headerLogo"><img src="/images/oasislogo.gif" alt="Delphi Logo"/></div>
 				<div id="headerTitle"><h1>Oasis Console</h1></div>
-				<div id="time"><h3>Time : </h3></div>
+				<div id="time"><h3>Current Time : </h3></div>
 				<script type="text/javascript" >
 					var date = new Date();
 					var n = date.toDateString();
@@ -47,55 +39,81 @@
 			
 			<nav id="horizontalNav">
 				<p>
-				<a href="http://www.google.com" target="_top">Google</a>
-				<a href="http://www.youtube.com" target="_blank">Youtube</a>
-				<a href="#" target="_blank">Work_Center</a>
-				<a href="#" target="_blank">ePolicy</a>
-				<a href="#" target="_blank">eFM</a>
-				<a href="#" target="_blank">eAdmin</a>
-				<a href="#" target="_blank">ODS</a>
-				<a href="#" target="_blank">CS</a>
-				<a href="#" target="_blank">Issue_Wizard_2_Email</a>
-				<a href="#" target="_blank">Output_Sub_System_Trouble_Shooting</a>
+				<a href="http://www.google.com" target="_blank">Google</a>
+				<!-- <a href="http://www.youtube.com" target="_blank">Youtube</a> -->
+				<a href="./issue_questionnaire.html" target="_blank">Issue_Quesstionaire</a>
+				<a href="./output_workflow.html" target="_blank">Output_Workflow</a>				
+				<a id="workcenter" href="#" target="_blank">Work_Center</a>
+				<a id="cis" href="#" target="_blank">CIS</a>	
+				<a id="eadmin" href="#" target="_blank">eAdmin</a>
+				<a id="ods" href="#" target="_blank">ODS</a>
+				<a id="edi" href="#" target="_blank">EDI Imports</a>
 				</p>
 			</nav>
 	
-  <script>
-  $( function() {
-	var env = $( "#env" ).selectmenu();
-	  
-	var format = $( "#outformat" ).selectmenu();
-	  
-	$( ".controlgroup" ).controlgroup()
-    $( ".controlgroup-vertical" ).controlgroup({
-      "direction": "vertical"
-    });
-	
-    /*$( "#speed" ).selectmenu();
- 
-    $( "#files" ).selectmenu();
- 
-    $( "#number" )
-      .selectmenu()
-      .selectmenu( "menuWidget" )
-        .addClass( "overflow" );
- 
-    $( "#salutation" ).selectmenu();*/
-    
-    $('#restresponse').hide();
-    
-    $( "button, input, a" ).click( function( event ) {
-    	console.log ("env=" + env.val());
-    	console.log ("format=" + format.val());
-    	//getConfig(env.val(), format.val());
-        event.preventDefault();
-      } );
-  } );
-  </script>
+		   <script>
+			  $( function() {
+				/*$( "#env" ).click() ( function () {
+					alert("env value changed to " + $this.val());
+					
+			        //$('a[href^="http://"]').each(function(){ 
+			        $('a[href^="#"]').each(function(){ 	
+			            var oldUrl = $(this).attr("href"); // Get current url
+			            var newUrl = oldUrl.replace("#", "https://"); // Create new url
+			            console.log ("new url = " + newUrl);
+			            $(this).attr("href", newUrl); // Set herf value
+			        });
+				});*/
+				
+				$('#env').on('click change', 'select', function(e){
+				    alert('hello');
+				});
+			  
+				$('body').on('change','#env',function(){
+				    alert('Change Happened');
+				    getLink(env.val(), "workcenter");
+				});
+				
+				$( "#env" ).select ( function ( event ) {
+		    		alert("in change");
+					getLink(env.val(), "workcenter");
+					event.preventDefault();
+				});
+				
+				$(document).on({
+					  change: function() {
+					    alert('helo change');
+					  },
+					  blur: function() {
+					    alert('helo');
+					  }
+					}, '#env select');
+				
+				$( ".controlgroup" ).controlgroup();
+			    /*$( ".controlgroup-vertical" ).controlgroup({
+			      "direction": "vertical"
+			    });*/
+				 
+			    //$('#restresponse').hide();
+			    
+			    $( "#envconfig" ).click( function( event ) {
+			    	alert ("getting config!");
+			    	var env = $( "#env" ).selectmenu();	  
+			    	var format = $( "#outformat" ).selectmenu();
+			    	
+			    	console.log ("env=" + env.val());
+			    	console.log ("format=" + format.val());
+			    	getConfig(env.val(), format.val());
+			        event.preventDefault();
+			        //return false;
+			      } );
+			  } );
+		   </script>
   				
 			<div id="content">
 				<div id="envcriteria" class="widget">
-					<form action="getConfig(env.val(), format.val());">
+					<!-- <form id="envcriteriaform" onsubmit="return getConfig(env.val(), format.val());"> -->
+					<!-- <form> -->
 					 	<fieldset>
 					 		<legend>Environment Criteria</legend>
 					 	
@@ -103,8 +121,10 @@
 							    <label for="env">Environment</label>
 							    <select name="env" id="env">
 							      <option selected="selected">-SELECT-</option>
-							      <option>MAG20171SE</option>
-							      <option>NORCAL20171SE</option>
+							      <option>tmlt20161se</option>
+							      <option>mag20171se</option>
+							      <option>norcal20171se</option>
+							      <option>wvmic20141qa</option>
 							    </select>
 							    
 							    <label for="outformat">Response format</label>
@@ -113,76 +133,21 @@
 							      <option>XML</option>
 							      <option>JSON</option>
 							      <option>HTML</option>
+							      <option>TEXT</option>
 							    </select>
 							</div>	
-							<input id="envsubmit" type="submit" value="Submit">
+							<input id="envconfig" type="button" value="Get Config">
 					 	</fieldset>
-   	
-					  <!--<fieldset>
-					    <label for="speed">Select a speed</label>
-					    <select name="speed" id="speed">
-					      <option>Slower</option>
-					      <option>Slow</option>
-					      <option selected="selected">Medium</option>
-					      <option>Fast</option>
-					      <option>Faster</option>
-					    </select>
-					 
-					    <label for="files">Select a file</label>
-					    <select name="files" id="files">
-					      <optgroup label="Scripts">
-					        <option value="jquery">jQuery.js</option>
-					        <option value="jqueryui">ui.jQuery.js</option>
-					      </optgroup>
-					      <optgroup label="Other files">
-					        <option value="somefile">Some unknown file</option>
-					        <option value="someotherfile">Some other file with a very long option text</option>
-					      </optgroup>
-					    </select>
-					 
-					    <label for="number">Select a number</label>
-					    <select name="number" id="number">
-					      <option>1</option>
-					      <option selected="selected">2</option>
-					      <option>3</option>
-					      <option>4</option>
-					      <option>5</option>
-					      <option>6</option>
-					      <option>7</option>
-					      <option>8</option>
-					      <option>9</option>
-					      <option>10</option>
-					      <option>11</option>
-					      <option>12</option>
-					      <option>13</option>
-					      <option>14</option>
-					      <option>15</option>
-					      <option>16</option>
-					      <option>17</option>
-					      <option>18</option>
-					      <option>19</option>
-					    </select>
-					 
-					    <label for="salutation">Select a title</label>
-					    <select name="salutation" id="salutation">
-					      <option disabled selected>Please pick one</option>
-					      <option>Mr.</option>
-					      <option>Mrs.</option>
-					      <option>Dr.</option>
-					      <option>Prof.</option>
-					      <option>Other</option>
-					    </select>
-					  </fieldset>-->
-					</form>
+					<!-- </form> -->
  				</div>
 				
-				<div id="restresponse">
-				
+				<div id="restresponse">			
 				</div>
 			</div>	
 		</div>
 		<footer>
-		<p>Delphi Technology Inc, Copyright &copy; 2018</p>
+		<hr>
+		<p><h5>Delphi Technology Inc, Copyright &copy; 2018</h5></p>
 		</footer>
 	</body>
 </html>

@@ -1,0 +1,174 @@
+/**
+ * 
+ */
+package com.delphi.rest.entity.policy;
+
+/**
+ * @author Athi
+ *
+ */
+public class PolicyType {
+	String POLICY_PK,POLICY_NO,POLICY_CYCLE_CODE,POLICY_TYPE_CODE,POL_CURR_STATUS_CODE,POL_CURR_REASON_CODE,PROCESS_STATUS_CODE,LEGACY_POLICY_NO,INCEPTION_DATE,SID,SERIAL_NUMBER,LOGON_TIME,WIP_B,LOCK_TIME,LEGACY_ISSUE_COMPANY_FK,FORMATTED_POL_NO;
+
+	public PolicyType(String pOLICY_PK, String pOLICY_NO, String pOLICY_CYCLE_CODE, String pOLICY_TYPE_CODE,
+			String pOL_CURR_STATUS_CODE, String pOL_CURR_REASON_CODE, String pROCESS_STATUS_CODE,
+			String lEGACY_POLICY_NO, String iNCEPTION_DATE, String sID, String sERIAL_NUMBER, String lOGON_TIME,
+			String wIP_B, String lOCK_TIME, String lEGACY_ISSUE_COMPANY_FK, String fORMATTED_POL_NO) {
+		super();
+		POLICY_PK = pOLICY_PK;
+		POLICY_NO = pOLICY_NO;
+		POLICY_CYCLE_CODE = pOLICY_CYCLE_CODE;
+		POLICY_TYPE_CODE = pOLICY_TYPE_CODE;
+		POL_CURR_STATUS_CODE = pOL_CURR_STATUS_CODE;
+		POL_CURR_REASON_CODE = pOL_CURR_REASON_CODE;
+		PROCESS_STATUS_CODE = pROCESS_STATUS_CODE;
+		LEGACY_POLICY_NO = lEGACY_POLICY_NO;
+		INCEPTION_DATE = iNCEPTION_DATE;
+		SID = sID;
+		SERIAL_NUMBER = sERIAL_NUMBER;
+		LOGON_TIME = lOGON_TIME;
+		WIP_B = wIP_B;
+		LOCK_TIME = lOCK_TIME;
+		LEGACY_ISSUE_COMPANY_FK = lEGACY_ISSUE_COMPANY_FK;
+		FORMATTED_POL_NO = fORMATTED_POL_NO;
+	}
+
+	public String getPOLICY_PK() {
+		return POLICY_PK;
+	}
+
+	public void setPOLICY_PK(String pOLICY_PK) {
+		POLICY_PK = pOLICY_PK;
+	}
+
+	public String getPOLICY_NO() {
+		return POLICY_NO;
+	}
+
+	public void setPOLICY_NO(String pOLICY_NO) {
+		POLICY_NO = pOLICY_NO;
+	}
+
+	public String getPOLICY_CYCLE_CODE() {
+		return POLICY_CYCLE_CODE;
+	}
+
+	public void setPOLICY_CYCLE_CODE(String pOLICY_CYCLE_CODE) {
+		POLICY_CYCLE_CODE = pOLICY_CYCLE_CODE;
+	}
+
+	public String getPOLICY_TYPE_CODE() {
+		return POLICY_TYPE_CODE;
+	}
+
+	public void setPOLICY_TYPE_CODE(String pOLICY_TYPE_CODE) {
+		POLICY_TYPE_CODE = pOLICY_TYPE_CODE;
+	}
+
+	public String getPOL_CURR_STATUS_CODE() {
+		return POL_CURR_STATUS_CODE;
+	}
+
+	public void setPOL_CURR_STATUS_CODE(String pOL_CURR_STATUS_CODE) {
+		POL_CURR_STATUS_CODE = pOL_CURR_STATUS_CODE;
+	}
+
+	public String getPOL_CURR_REASON_CODE() {
+		return POL_CURR_REASON_CODE;
+	}
+
+	public void setPOL_CURR_REASON_CODE(String pOL_CURR_REASON_CODE) {
+		POL_CURR_REASON_CODE = pOL_CURR_REASON_CODE;
+	}
+
+	public String getPROCESS_STATUS_CODE() {
+		return PROCESS_STATUS_CODE;
+	}
+
+	public void setPROCESS_STATUS_CODE(String pROCESS_STATUS_CODE) {
+		PROCESS_STATUS_CODE = pROCESS_STATUS_CODE;
+	}
+
+	public String getLEGACY_POLICY_NO() {
+		return LEGACY_POLICY_NO;
+	}
+
+	public void setLEGACY_POLICY_NO(String lEGACY_POLICY_NO) {
+		LEGACY_POLICY_NO = lEGACY_POLICY_NO;
+	}
+
+	public String getINCEPTION_DATE() {
+		return INCEPTION_DATE;
+	}
+
+	public void setINCEPTION_DATE(String iNCEPTION_DATE) {
+		INCEPTION_DATE = iNCEPTION_DATE;
+	}
+
+	public String getSID() {
+		return SID;
+	}
+
+	public void setSID(String sID) {
+		SID = sID;
+	}
+
+	public String getSERIAL_NUMBER() {
+		return SERIAL_NUMBER;
+	}
+
+	public void setSERIAL_NUMBER(String sERIAL_NUMBER) {
+		SERIAL_NUMBER = sERIAL_NUMBER;
+	}
+
+	public String getLOGON_TIME() {
+		return LOGON_TIME;
+	}
+
+	public void setLOGON_TIME(String lOGON_TIME) {
+		LOGON_TIME = lOGON_TIME;
+	}
+
+	public String getWIP_B() {
+		return WIP_B;
+	}
+
+	public void setWIP_B(String wIP_B) {
+		WIP_B = wIP_B;
+	}
+
+	public String getLOCK_TIME() {
+		return LOCK_TIME;
+	}
+
+	public void setLOCK_TIME(String lOCK_TIME) {
+		LOCK_TIME = lOCK_TIME;
+	}
+
+	public String getLEGACY_ISSUE_COMPANY_FK() {
+		return LEGACY_ISSUE_COMPANY_FK;
+	}
+
+	public void setLEGACY_ISSUE_COMPANY_FK(String lEGACY_ISSUE_COMPANY_FK) {
+		LEGACY_ISSUE_COMPANY_FK = lEGACY_ISSUE_COMPANY_FK;
+	}
+
+	public String getFORMATTED_POL_NO() {
+		return FORMATTED_POL_NO;
+	}
+
+	public void setFORMATTED_POL_NO(String fORMATTED_POL_NO) {
+		FORMATTED_POL_NO = fORMATTED_POL_NO;
+	}
+
+	@Override
+	public String toString() {
+		return "PolicyType [POLICY_PK=" + POLICY_PK + ", POLICY_NO=" + POLICY_NO + ", POLICY_CYCLE_CODE="
+				+ POLICY_CYCLE_CODE + ", POLICY_TYPE_CODE=" + POLICY_TYPE_CODE + ", POL_CURR_STATUS_CODE="
+				+ POL_CURR_STATUS_CODE + ", POL_CURR_REASON_CODE=" + POL_CURR_REASON_CODE + ", PROCESS_STATUS_CODE="
+				+ PROCESS_STATUS_CODE + ", LEGACY_POLICY_NO=" + LEGACY_POLICY_NO + ", INCEPTION_DATE=" + INCEPTION_DATE
+				+ ", SID=" + SID + ", SERIAL_NUMBER=" + SERIAL_NUMBER + ", LOGON_TIME=" + LOGON_TIME + ", WIP_B="
+				+ WIP_B + ", LOCK_TIME=" + LOCK_TIME + ", LEGACY_ISSUE_COMPANY_FK=" + LEGACY_ISSUE_COMPANY_FK
+				+ ", FORMATTED_POL_NO=" + FORMATTED_POL_NO + "]";
+	}
+}
